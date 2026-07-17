@@ -1,42 +1,27 @@
-# Scoop Bucket Template
+# Croppick Scoop Bucket
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+[![Tests](https://github.com/EvaldasVasiliauskas/scoop-croppick/actions/workflows/ci.yml/badge.svg)](https://github.com/EvaldasVasiliauskas/scoop-croppick/actions/workflows/ci.yml) [![Excavator](https://github.com/EvaldasVasiliauskas/scoop-croppick/actions/workflows/excavator.yml/badge.svg)](https://github.com/EvaldasVasiliauskas/scoop-croppick/actions/workflows/excavator.yml)
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+The official [Scoop](https://scoop.sh) bucket for [Croppick](https://croppick.com) apps.
 
-## How do I use this template?
+## Apps
 
-1. Generate your own copy of this repository with the "Use this template"
-   button.
-2. Allow all GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Actions permissions`.
-   - Select `Allow all actions and reusable workflows`.
-   - Then `Save`.
-3. Allow writing to the repository from within GitHub Actions:
-   - Navigate to `Settings` - `Actions` - `General` - `Workflow permissions`.
-   - Select `Read and write permissions`.
-   - Then `Save`.
-4. Document the bucket in `README.md`.
-5. Replace the placeholder repository string in `bin/auto-pr.ps1`.
-6. Create new manifests by copying `bucket/app-name.json.template` to
-   `bucket/<app-name>.json`.
-7. Commit and push changes.
-8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
-   topic `scoop-bucket` to your repository.
+| App | Description |
+| --- | ----------- |
+| [CroppickVoice](https://voice.croppick.com) | Free on-device voice typing for any app, plus Crop & Speak — annotate a region of your screen and narrate it into ChatGPT or Claude. |
 
-## How do I install these manifests?
-
-After manifests have been committed and pushed, run the following:
+## Install
 
 ```pwsh
-scoop bucket add <bucketname> https://github.com/<username>/<bucketname>
-scoop install <bucketname>/<manifestname>
+scoop bucket add croppick https://github.com/EvaldasVasiliauskas/scoop-croppick
+scoop install croppick/croppickvoice
 ```
 
-## How do I contribute new manifests?
+## Update
 
-To make a new manifest contribution, please read the [Contributing
-Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md)
-and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
-wiki page.
+```pwsh
+scoop update croppickvoice
+```
+
+Manifests track the publisher release feed at
+`https://dl-voice.croppick.com/latest.json` and are refreshed automatically.
